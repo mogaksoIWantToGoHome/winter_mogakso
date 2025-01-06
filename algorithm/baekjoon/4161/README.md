@@ -134,11 +134,13 @@ $$
 #### 이다. 
 #### 즉
 $$
-R = 
-|\frac{2x+y}{3} + \frac{5}{3} \lambda_1 + \frac{4}{3} \lambda_2 | + 
+R = |\frac{2x+y}{3} + \frac{5}{3} \lambda_1 + \frac{4}{3} \lambda_2 | + 
 |-\frac{2y+x}{3} - \frac{4}{3} \lambda_1 - \frac{5}{3} \lambda_2 | + 
 |\lambda_1| + 
-|\lambda_2| \\ = |\frac{2x+y}{3} + \frac{5}{3} \lambda_1 + \frac{4}{3} \lambda_2 | + 
+|\lambda_2| 
+$$
+$$
+= |\frac{2x+y}{3} + \frac{5}{3} \lambda_1 + \frac{4}{3} \lambda_2 | + 
 |\frac{2y+x}{3} + \frac{4}{3} \lambda_1 + \frac{5}{3} \lambda_2 | + 
 |\lambda_1| + 
 |\lambda_2|
