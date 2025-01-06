@@ -26,14 +26,11 @@
 #### 위의 좌표를 통해 미지수 4개만을 사용해 나이트의 이동을 표현할 수 있으며 이를 행렬로 표현하면 다음과 같다.
 
 $$
-<<<<<<< HEAD
 A: \begin{bmatrix}
 2 & 1 &  2 &  1 \\
 -1 & -2 & 1 & 2 \\
 \end{bmatrix} 
 \times
-=======
->>>>>>> cf10ec9 (수식오류 해결 시도 1)
 \begin{bmatrix}
 2 & 1 &  2 &  1 \\
 -1 & -2 & 1 & 2
@@ -41,17 +38,12 @@ A: \begin{bmatrix}
 a\\
 b\\
 c\\
-<<<<<<< HEAD
 d\\
 \end{bmatrix}
 $$
 $$
 =
 \begin{bmatrix}
-=======
-d
-\end{bmatrix} = \begin{bmatrix}
->>>>>>> cf10ec9 (수식오류 해결 시도 1)
 x\\
 y
 \end{bmatrix}
