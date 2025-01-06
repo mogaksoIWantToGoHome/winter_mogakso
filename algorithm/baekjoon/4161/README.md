@@ -157,11 +157,11 @@ $$
 #### 이때, $\lambda_1 = 3n + t$, $\lambda_2 = 3m+k$라 하면
 
 ##### 1) $2x+y \equiv 0 (mod 3) (0 \le t \le 2)$
-$ \to R=|\frac{2x+y}{3} + 3t + 5n + 4m| + |\frac{x+2y}{3} + 3t + 4n + 5m| + |3n + t| + |3m + t|$
+$ \to R=|\frac{2x+y}{3} + 3t + 5n + 4m| + |\frac{x+2y}{3} + 3t + 4n + 5m| + |3n + t| + |3m + t|$.
 ##### 2) $2x+y \equiv 1 (mod 3) (0 \le t \le 2)$
-$ \to R=|\frac{2x+y-4}{3} + 3t + 5n + 4m| + |\frac{x+2y-5}{3} + 3t + 4n + 5m| + |3n + t| + |3m + t-1|$
+$ \to R=|\frac{2x+y-4}{3} + 3t + 5n + 4m| + |\frac{x+2y-5}{3} + 3t + 4n + 5m| + |3n + t| + |3m + t-1|$.
 ##### 3) $2x+y \equiv 2 (mod 3) (0 \le t \le 2)$
-$ \to R=|\frac{2x+y+4}{3} + 3t + 5n + 4m| + |\frac{x+2y+5}{3} + 3t + 4n + 5m| + |3n + t| + |3m + t+1|$
+$ \to R=|\frac{2x+y+4}{3} + 3t + 5n + 4m| + |\frac{x+2y+5}{3} + 3t + 4n + 5m| + |3n + t| + |3m + t+1|$.
 
 #### 이다. 따라서 해당 조건에 맞춰 t값을 0부터 2까지 조정하며 각각 삼분탐색을 통해 최솟값을 구해 최종 최솟값을 구해 답을 구할 수 있다. 
 
