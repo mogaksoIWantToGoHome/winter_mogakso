@@ -24,12 +24,8 @@
 
 ### 2. 표현
 #### 위의 좌표를 통해 미지수 4개만을 사용해 나이트의 이동을 표현할 수 있으며 이를 행렬로 표현하면 다음과 같다.
-
 $$
 \begin{bmatrix}
-2 & 1 &  2 &  1 \\
--1 & -2 & 1 & 2 \\
-\end{bmatrix}  \times \begin{bmatrix}
 2 & 1 &  2 &  1 \\
 -1 & -2 & 1 & 2
 \end{bmatrix} \times \begin{bmatrix}
@@ -37,7 +33,7 @@ a\\
 b\\
 c\\
 d\\
-\end{bmatrix} = \\ \begin{bmatrix}
+\end{bmatrix} = \begin{bmatrix}
 x\\
 y
 \end{bmatrix}
