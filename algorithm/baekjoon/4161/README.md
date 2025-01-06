@@ -81,7 +81,16 @@ a\\
 b\\
 0\\
 0
-\end{bmatrix} \\ 2a + b = x \\ -a - 2b = y \\ v_{specity} = \begin{bmatrix}
+\end{bmatrix}
+$$
+$$
+2a + b = x
+$$
+$$
+-a - 2b = y
+$$
+$$
+v_{specity} = \begin{bmatrix}
 \frac{2x+y}{3} \\
 -\frac{2y+x}{3}\\
 0\\
