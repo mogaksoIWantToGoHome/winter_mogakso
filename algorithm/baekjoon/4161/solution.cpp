@@ -60,63 +60,49 @@ void siv(ll n) {
     }
 }
 
-vector<vector<array<ll, 4>>> chess_board(33, vector<array<ll, 4>>(33));
-array<array<bool, 33>, 33> visited;
+ll get_modulo(ll n, ll r) {
+    return ((n % r) + r) % r;
+}
 
-int direc[10][2] = {
-    {1, 2},
-    {-1, -2},
-    {2, 1},
-    {-2, -1},
-    {2, -1},
-    {-2, 1},
-    {1, -2},
-    {-1, 2}
-};
+ll f(ll x, ll y, ll t, ll n, ll m, ll o) {
+    return abs((2*x + y + 4*o)/3 + 3*t +5*n + 4*m) + abs((2*y + x + 5*o)/3 + 3*t + 4*n + 5*m) + abs(3*n + t) + abs(3*m + t + o);
+}
 
-void preset() {
-    int x = 16, y = 16;
-    
-    queue<array<int, 3>> q;
+void solution(ll x, ll y) {
+    x = abs(x);
+    y = abs(y);
 
-    q.push({x,y,1});
-    chess_board[16][16] = {0,0,0,0};
-    visited[16][16] = true;
-    
+    ll temp1 = 2*x - y;
+    ll temp2 = 2*y - x;
 
-    for(int i = 0; true; i++) {
-        auto [cur_x, cur_y, count] = q.front();
+    ll a, b, c, d, o;
 
-        // cout << cur_x << " " << cur_y << "\n";
+    ll pos[4][2] = {
+        {-1e9, -1e9},
+        {1e9, -1e9},
+        {1e9, 1e9},
+        {-1e9, 1e9}
+    };
 
-        if(count == 9) {
-            break;
+    for(int t = 0; t < 3; t++) {
+        switch(get_modulo(temp1, 3)) {
+            case 0: 
+                o = 0;
+                break;
+            case 1:
+                o = -1;
+                break;
+            case 2:
+                o = 1;
+                break;
         }
-        q.pop();
 
-        for(int j = 0; j < 8; j++) {
-            int next_x = cur_x + direc[j][0];
-            int next_y = cur_y + direc[j][1];
-            if(!visited[next_x][next_y]) {
-                q.push({next_x, next_y, count+1});
-                visited[next_x][next_y] = true;
-                chess_board[next_x][next_y] = chess_board[cur_x][cur_y];
-                if(j %2)
-                    --chess_board[next_x][next_y][j/2];
-                else 
-                    ++chess_board[next_x][next_y][j/2];
-                // cout << (next_x-16) << " " << (next_y-16) << ": " << chess_board[next_x][next_y][0] << " " << chess_board[next_x][next_y][1] << " " << chess_board[next_x][next_y][2] << " " << chess_board[next_x][next_y][3] << "\n";
-            }
-        }
-    }
 
-    chess_board[16][16][0] = 0;
+    }   
 }
 
 int main(int argc, char* argv[]) {
-    fio; 
-
-    // preset();
+    fio;
 
     while(true){
 
@@ -130,31 +116,7 @@ int main(int argc, char* argv[]) {
         stringstream ss(s);
         ss >> x >> y;
 
-        x = abs(x);
-        y = abs(y);
-
-        ll temp1 = 2*x - y;
-        ll temp2 = 2*y - x;
-
-        ll result = LONG_LONG_MAX;
-
-        for(int i = -1; i <= 1; i++) {
-            ll temp_result = 0;
-            for(int j = -1; j <= 1; j++) {
-                ll p = temp1 + 5*i + 4*j;
-                ll q = temp2 - 4*i - 5*j;
-
-                if(p % 3 == 0 && q % 3 == 0) {
-                    // cout << p << " " << q << " " << i << " " << j << "\n";
-                    temp_result = abs(p)/3 + abs(q)/3 + abs(i) + abs(j);
-                    result = min(result, temp_result);
-                }
-            }
-        }
-
-        cout << result << "\n";
-
-        
+        solution(x, y);
     }
 
     return 0;
